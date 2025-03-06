@@ -1,6 +1,6 @@
 import React from "react"
 import { FiShield, FiMonitor, FiClock, FiDatabase } from "react-icons/fi"
-import './FeaturesSection.css'  // Importa el archivo CSS
+import '../styles/FeaturesSection.css'
 
 const FeaturesSection = () => {
   const features = [
