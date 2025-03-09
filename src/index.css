@@ -485,3 +485,102 @@ html, body {
     border-bottom-right-radius: 15px;
   }
 } 
+
+
+.notification-wrapper {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 100%;
+  max-width: 400px;
+  padding: 0 20px;
+}
+
+.notification {
+  background-color: var(--background-color);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  animation: slideDown 0.3s ease-out;
+}
+
+.notification-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.success .notification-icon {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.error .notification-icon {
+  background-color: #f44336;
+  color: white;
+}
+
+.check-icon,
+.error-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  color: var(--text-color);
+}
+
+.notification-message {
+  margin: 0;
+  color: var(--secondary-text);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .notification-wrapper {
+    padding: 0 10px;
+  }
+
+  .notification {
+    padding: 15px;
+  }
+
+  .notification-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .check-icon,
+  .error-icon {
+    width: 20px;
+    height: 20px;
+  }
+}

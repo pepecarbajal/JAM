@@ -24,7 +24,7 @@ export default function Projects() {
   const currentProject = projects[currentProjectIndex];
 
   return (
-    <section className="projects-section">
+    <section id='projects-section' className="projects-section">
       <div
         className="project-background"
         style={{ backgroundImage: `url(${currentProject.src})` }}

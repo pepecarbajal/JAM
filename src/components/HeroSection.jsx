@@ -1,5 +1,21 @@
 import React from "react";
 
+// Función para desplazar a la sección de contacto
+const scrollToContact = () => {
+  const contactSection = document.getElementById("contact-section");
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
+// Función para desplazar a la sección de proyectos
+const scrollToProjects = () => {
+  const projectsSection = document.getElementById("projects-section");
+  if (projectsSection) {
+    projectsSection.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 const HeroSection = () => {
   return (
     <section className="hero-section">
@@ -13,8 +29,12 @@ const HeroSection = () => {
           empresarial.
         </p>
         <div className="hero-button-container">
-          <button className="hero-contact-button">Contactar</button>
-          <button className="hero-project-button">Ver Proyectos</button>
+        <button className="hero-contact-button" onClick={scrollToContact}>
+            Contactar
+          </button>
+          <button className="hero-project-button" onClick={scrollToProjects}>
+            Ver Proyectos
+          </button>
         </div>
       </div>
       <div>
