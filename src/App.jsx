@@ -5,16 +5,14 @@ import FooterSection from "./components/FooterSection";
 import HeroSection from "./components/HeroSection";
 import ServicesSection from "./components/ServicesSection";
 
-
 export default function App() {
   return (
-    <main>
+    <>
       <HeroSection />
       <ServicesSection />
       <FeaturesSection />
       <ContactSection />
       <FooterSection />
-    </main>
-  )
+    </>
+  );
 }
-

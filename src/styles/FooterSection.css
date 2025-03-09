@@ -24,8 +24,8 @@
   }
   
   .logo {
-    width: 12vw;
-    border-radius: 50%;
+    width: 100px;
+    max-width: 100%;
   }
   
   .column {

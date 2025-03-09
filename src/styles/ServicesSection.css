@@ -1,3 +1,6 @@
+
+/* ServicesSection.css */
+
 .services-section {
     padding: 4rem 2rem;
     background-color: black;
@@ -26,8 +29,8 @@
     border-radius: 0.5rem;
     text-align: center;
     flex: 1;
-    min-width: 300px;
-    max-width: 350px;
+    min-width: auto;
+    max-width: 100%;
   }
   
   .service-icon {
