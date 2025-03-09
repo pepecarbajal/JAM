@@ -54,6 +54,7 @@ const FooterSection = () => {
           <div className="column">
             <h3 className="heading">Contacto</h3>
             <p className="contact-info">info@jamdev.com</p>
+            <p className="contact-info">(756) 127 0452</p>
             <p className="contact-info">Chilpancingo de los Bravo, Gro.</p>
           </div>
         </div>
