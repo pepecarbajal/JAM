@@ -1,6 +1,5 @@
 import React from "react"
 import { FiShield, FiMonitor, FiClock, FiDatabase } from "react-icons/fi"
-import '../styles/FeaturesSection.css'
 
 const FeaturesSection = () => {
   const features = [
@@ -8,11 +7,6 @@ const FeaturesSection = () => {
       title: "Garantía de Calidad",
       description: "Código limpio y pruebas exhaustivas para garantizar la mejor calidad",
       icon: <FiShield />,
-    },
-    {
-      title: "Tecnologías Modernas",
-      description: "Utilizamos las últimas tecnologías y mejores prácticas",
-      icon: <FiMonitor />,
     },
     {
       title: "Soporte 24/7",

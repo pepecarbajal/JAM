@@ -1,31 +1,54 @@
 import React from "react"
-import '../styles/FooterSection.css'
-import logo from '../../public/logo.png'
 
 const FooterSection = () => {
   return (
     <footer className="footer">
       <div className="container">
         <div className="main-content">
-
           <div className="logo-container">
-            <img src={logo} className="logo" alt="Logo" />
+            <picture>
+              <source
+                srcSet="/logo-dark.png"
+                media="(prefers-color-scheme: dark)"
+              />
+              <source
+                srcSet="/logo-light.png"
+                media="(prefers-color-scheme: light)"
+              />
+              <img src="/logo-light.png" alt="Logo" className="hero-logo" />
+            </picture>
           </div>
 
           <div className="column">
             <h3 className="heading">Servicios</h3>
-            <a href="#" className="link">Desarrollo Web</a>
-            <a href="#" className="link">Apps Móviles</a>
-            <a href="#" className="link">Software Empresarial</a>
-            <a href="#" className="link">Consultoría IT</a>
+            <a href="#" className="link">
+              Desarrollo Web
+            </a>
+            <a href="#" className="link">
+              Apps Móviles
+            </a>
+            <a href="#" className="link">
+              Software Empresarial
+            </a>
+            <a href="#" className="link">
+              Consultoría IT
+            </a>
           </div>
 
           <div className="column">
             <h3 className="heading">Empresa</h3>
-            <a href="#" className="link">Sobre Nosotros</a>
-            <a href="#" className="link">Proyectos</a>
-            <a href="#" className="link">Blog</a>
-            <a href="#" className="link">Contacto</a>
+            <a href="#" className="link">
+              Sobre Nosotros
+            </a>
+            <a href="#" className="link">
+              Proyectos
+            </a>
+            <a href="#" className="link">
+              Blog
+            </a>
+            <a href="#" className="link">
+              Contacto
+            </a>
           </div>
 
           <div className="column">
@@ -35,10 +58,12 @@ const FooterSection = () => {
           </div>
         </div>
 
-        <div className="copyright">© 2025 JAM Development. Todos los derechos reservados.</div>
+        <div className="copyright">
+          © 2025 JAM Desarrollo de Software. Todos los derechos reservados.
+        </div>
       </div>
     </footer>
-  )
+  );
 }
 
 export default FooterSection

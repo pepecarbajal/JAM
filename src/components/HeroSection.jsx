@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/HeroSection.css"; // Asegúrate de importar el archivo CSS
 
 const HeroSection = () => {
   return (
@@ -19,7 +18,11 @@ const HeroSection = () => {
         </div>
       </div>
       <div>
-        <img src="/logo.png" alt="Logo" className="hero-logo" />
+        <picture>
+          <source srcSet="/logo-dark.png" media="(prefers-color-scheme: dark)" />
+          <source srcSet="/logo-light.png" media="(prefers-color-scheme: light)" />
+          <img src="/logo-light.png" alt="Logo" className="hero-logo" />
+        </picture>
       </div>
     </section>
   );

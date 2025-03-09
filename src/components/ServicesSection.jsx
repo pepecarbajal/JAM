@@ -1,5 +1,4 @@
 import { FiMonitor, FiSmartphone, FiCode } from "react-icons/fi"
-import '../styles/ServicesSection.css';
 
 const ServicesSection = () => {
   return (
