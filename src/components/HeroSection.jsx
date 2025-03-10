@@ -29,7 +29,7 @@ const HeroSection = () => {
           empresarial.
         </p>
         <div className="hero-button-container">
-        <button className="hero-contact-button" onClick={scrollToContact}>
+          <button className="hero-contact-button" onClick={scrollToContact}>
             Contactar
           </button>
           <button className="hero-project-button" onClick={scrollToProjects}>

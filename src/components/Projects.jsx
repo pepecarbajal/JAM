@@ -6,7 +6,7 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      src: "https://img.freepik.com/foto-gratis/resumen-superficie-texturas-muro-piedra-hormigon-blanco_74190-8189.jpg",
+      src: "/images/project01.png",
       alt: "Proyecto 1",
       title: "Diseño Web",
       description: "Desarrollo de sitios web modernos y responsivos",
