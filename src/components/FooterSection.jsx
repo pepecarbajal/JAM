@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const FooterSection = () => {
   return (
@@ -22,40 +22,44 @@ const FooterSection = () => {
           <div className="column">
             <h3 className="heading">Servicios</h3>
             <a href="#" className="link">
-              Desarrollo Web
+              Web Informativa
             </a>
             <a href="#" className="link">
-              Apps Móviles
+              Sistema web básico
             </a>
             <a href="#" className="link">
-              Software Empresarial
-            </a>
-            <a href="#" className="link">
-              Consultoría IT
+              Desarrollo a la medida
             </a>
           </div>
-
-          <div className="column">
-            <h3 className="heading">Empresa</h3>
-            <a href="#" className="link">
-              Sobre Nosotros
-            </a>
-            <a href="#" className="link">
-              Proyectos
-            </a>
-            <a href="#" className="link">
-              Blog
-            </a>
-            <a href="#" className="link">
-              Contacto
-            </a>
-          </div>
-
           <div className="column">
             <h3 className="heading">Contacto</h3>
-            <p className="contact-info">info@jamdev.com</p>
-            <p className="contact-info">(756) 127 0452</p>
-            <p className="contact-info">Chilpancingo de los Bravo, Gro.</p>
+            <a
+              href="https://wa.me/527471757401"
+              className="link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              +52 747 175 7401
+            </a>
+            <a
+              href="https://wa.me/527561270452"
+              className="link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              +52 756 127 0452
+            </a>
+            <a
+              href="https://wa.me/527471674419"
+              className="link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              +52 747 167 4419
+            </a>
+            <a href="mailto:jamsoftware@outlook.com" className="link">
+              jamsoftware@outlook.com
+            </a>
           </div>
         </div>
 
@@ -65,6 +69,6 @@ const FooterSection = () => {
       </div>
     </footer>
   );
-}
+};
 
-export default FooterSection
+export default FooterSection;
