@@ -32,9 +32,9 @@ const HeroSection = () => {
           <button className="hero-contact-button" onClick={scrollToContact}>
             Contactar
           </button>
-          <button className="hero-project-button" onClick={scrollToProjects}>
+          {/* <button className="hero-project-button" onClick={scrollToProjects}>
             Ver Proyectos
-          </button>
+          </button> */}
         </div>
       </div>
       <div>
