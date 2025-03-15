@@ -16,12 +16,65 @@ const ContactSection = () => {
     type: "",
   })
 
+  const [errors, setErrors] = React.useState({
+    nombre: "",
+    telefono: "",
+    asunto: "",
+    mensaje: "",
+  })
+
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }))
+    // Clear the error message when the user starts typing
+    setErrors((prev) => ({
+      ...prev,
+      [name]: "",
+    }))
+  }
+
+  const validateForm = () => {
+    let isValid = true
+    const newErrors = { nombre: "", telefono: "", asunto: "", mensaje: "" }
+
+    // Validate nombre
+    if (!formData.nombre.trim()) {
+      newErrors.nombre = "El nombre es requerido."
+      isValid = false
+    } else if (!/^[A-Za-z\s]+$/.test(formData.nombre)) {
+      newErrors.nombre = "El nombre solo debe contener letras y espacios."
+      isValid = false
+    }
+
+    // Validate telefono
+    if (!formData.telefono.trim()) {
+      newErrors.telefono = "El teléfono es requerido."
+      isValid = false
+    } else if (!/^\d+$/.test(formData.telefono)) {
+      newErrors.telefono = "El teléfono solo debe contener números."
+      isValid = false
+    } else if (formData.telefono.length < 10 || formData.telefono.length > 10) {
+      newErrors.telefono = "El teléfono debe tener 10 dígitos."
+      isValid = false
+    }
+
+    // Validate asunto
+    if (!formData.asunto.trim()) {
+      newErrors.asunto = "El asunto es requerido."
+      isValid = false
+    }
+
+    // Validate mensaje
+    if (!formData.mensaje.trim()) {
+      newErrors.mensaje = "El mensaje es requerido."
+      isValid = false
+    }
+
+    setErrors(newErrors)
+    return isValid
   }
 
   const showNotification = (message, type) => {
@@ -41,6 +94,10 @@ const ContactSection = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
+
+    if (!validateForm()) {
+      return
+    }
 
     const formDataToSend = new FormData(event.target)
     const data = {
@@ -129,6 +186,7 @@ const ContactSection = () => {
               onChange={handleChange}
               required
             />
+            {errors.nombre && <p className="error-message">{errors.nombre}</p>}
             <input
               className="input"
               type="tel"
@@ -138,6 +196,7 @@ const ContactSection = () => {
               onChange={handleChange}
               required
             />
+            {errors.telefono && <p className="error-message">{errors.telefono}</p>}
           </div>
           <div className="form-group">
             <input
@@ -149,6 +208,7 @@ const ContactSection = () => {
               onChange={handleChange}
               required
             />
+            {errors.asunto && <p className="error-message">{errors.asunto}</p>}
           </div>
           <div className="form-group">
             <textarea
@@ -159,16 +219,15 @@ const ContactSection = () => {
               onChange={handleChange}
               required
             />
+            {errors.mensaje && <p className="error-message">{errors.mensaje}</p>}
           </div>
           <button type="submit" className="submit-button">
             Enviar Mensaje
           </button>
         </form>
       </div>
-
     </section>
   )
 }
 
 export default ContactSection
-
